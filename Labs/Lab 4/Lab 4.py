@@ -56,4 +56,4 @@ def Aitken(x):
 
 (Aitken(x) - 1.3652300134140976)/(x - 1.3652300134140976)[:-2]
 
-compute_order(np.array([m for m in Aitken(x) if m!=0]), 1.3652300134140976)
+compute_order(Aitken(x), 1.3652300134140976)
