@@ -143,3 +143,19 @@ p0 = 2
 
 p - 1.134724138402
 pvals - 1.134724138402
+
+xk1 = np.abs((p - 1.134724138402)[1:])
+xk = np.abs((p - 1.134724138402)[:-1])
+plt.loglog(xk, xk1)
+plt.title('Log Error in $x_{n+1}$ vs $x_n$, Newton method')
+plt.xlabel('Error $x_n$')
+plt.ylabel('Error $x_{n+1}$')
+plt.show()
+
+xk1 = np.abs((pvals - 1.134724138402)[1:])
+xk = np.abs((pvals - 1.134724138402)[:-1])
+plt.loglog(xk, xk1)
+plt.title('Log Error in $x_{n+1}$ vs $x_n$, Secant method')
+plt.xlabel('Error $x_n$')
+plt.ylabel('Error $x_{n+1}$')
+plt.show()
